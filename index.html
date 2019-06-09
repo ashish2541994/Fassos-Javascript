@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+    <link href="style.css" rel="stylesheet" />
+    <header> 
+      <div class="logo">Logo</div>      
+    </header>
+  </head>
+  <body>
+    <div id="root">
+      <div id="myNav" class="overlay">
+        <div class='addedTitle'>Added Movies</div>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div id="movieList" class="overlay-content"><!-- Added List SideBar --></div> 
+        
+      </div>
+      <div>
+        <!--  -->
+        <button class="headBtn" onclick="openNav()">My Movie Library</button>
+        <input type="text" name="search" oninput="search(this.value)" placeholder="Search movies.." class="searchbar">
+        <select id="mySelect" onchange="sort()">
+          <option value="title">Title</option>
+          <option value="year">Year of Release</option>
+        </select>
+      </div>
+      <!-- All Movies List Dynamically Created Charts -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
